@@ -1,0 +1,78 @@
+{
+  "code": 200,
+  "msg": "",
+  "data": [
+    {
+      "startDate": "2019-11-12",
+      "endDate": "2019-11-12"
+    },
+    {
+      "startDate": "2019-11-13",
+      "endDate": "2019-11-13"
+    },
+    {
+      "startDate": "2019-11-14",
+      "endDate": "2019-11-14",
+      "startTime": "08:00",
+      "endTime": "09:00",
+      "courseName": "锋利4",
+      "courseId": "112"
+    },
+    {
+      "startDate": "2019-11-15",
+      "endDate": "2019-11-15",
+      "startTime": "08:00",
+      "endTime": "09:00",
+      "courseName": "锋利5",
+      "courseId": "113"
+    },
+    {
+      "startDate": "2019-11-15",
+      "endDate": "2019-11-15",
+      "startTime": "10:00",
+      "endTime": "12:00",
+      "courseName": "HTML6",
+      "courseId": "114"
+    },
+    {
+      "startDate": "2019-11-17",
+      "endDate": "2019-11-17",
+      "startTime": "13:00",
+      "endTime": "15:00",
+      "courseName": "JavaScript7",
+      "courseId": "115"
+    },
+    {
+      "startDate": "2019-11-18",
+      "endDate": "2019-11-18",
+      "startTime": "16:00",
+      "endTime": "18:00",
+      "courseName": "数据库8",
+      "courseId": "116"
+    },
+    {
+      "startDate": "2019-11-19",
+      "endDate": "2019-11-19",
+      "startTime": "13:00",
+      "endTime": "15:00",
+      "courseName": "数据库原理及应用",
+      "courseId": "117"
+    },
+    {
+      "startDate": "2019-11-20",
+      "endDate": "2019-11-20",
+      "startTime": "08:00",
+      "endTime": "09:00",
+      "courseName": "数据库原理及应用",
+      "courseId": "118"
+    },
+    {
+      "startDate": "2019-11-21",
+      "endDate": "2019-11-21",
+      "startTime": "10:00",
+      "endTime": "12:00",
+      "courseName": "数据库原理及应用",
+      "courseId": "119"
+    }
+  ]
+}

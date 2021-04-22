@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>成绩</title>
+</head>
+<body>
+<div id="toolbarDemo" style="display: none">
+    <div class="layui-btn-container" style="float:left">
+
+    </div>
+</div>
+<script type="text/html" id="authoritiesTbBar">
+</script>
+<div class="layui-fluid vue-box">
+    <div class="layui-card">
+        <div class="layui-card-body">
+            <!-- 表格工具栏 -->
+            <form class="layui-form toolbar el-form">
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <label class="layui-form-label">课程id:</label>
+                        <div class="layui-input-inline">
+                            <input name="courseId" class="layui-input" placeholder="课程id"/>
+                        </div>
+                    </div>
+                    <div class="layui-inline">&emsp;
+                        <div class="layui-btn icon-btn" @click="seachs()">
+                            <i class="layui-icon">&#xe615;</i>搜索
+                        </div>&nbsp;
+                    </div>
+                </div>
+            </form>
+            <!-- 数据表格 -->
+            <div id="authoritiesTable"></div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="/js/require.js"></script>
+<script type="text/javascript" src="/js/requireConfig.js"></script>
+<script type="text/javascript" src="/app/scource/list.js"></script>
+</body>
+</html>

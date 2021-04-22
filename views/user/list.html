@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户管理</title>
+    <style>
+        .vi{
+            display: block;
+        }
+        .di{
+           display: none;
+        }
+    </style>
+</head>
+<body>
+<div id="toolbarDemo" style="display: none">
+    <div class="layui-btn-container" style="float:left">
+
+    </div>
+</div>
+<script type="text/html" id="authoritiesTbBar">
+</script>
+<div class="layui-fluid vue-box">
+    <div class="layui-card">
+        <div class="layui-card-body">
+            <!-- 表格工具栏 -->
+            <form class="layui-form toolbar el-form">
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <label class="layui-form-label">用户名称:</label>
+                        <div class="layui-input-inline">
+                            <input name="nickName" class="layui-input" placeholder="用户名称"/>
+                        </div>
+                    </div>
+                    <div class="layui-inline">&emsp;
+                        <div class="layui-btn icon-btn" @click="seachs()">
+                            <i class="layui-icon">&#xe615;</i>搜索
+                        </div>&nbsp;
+                    </div>
+                </div>
+            </form>
+            <!-- 数据表格 -->
+            <div id="authoritiesTable"></div>
+        </div>
+    </div>
+    <div id="admins" style="display: none;padding-right: 20px;">
+        <br>
+        <form class="layui-form" action="">
+            <div class="layui-row">
+                <div class="layui-col-md6">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">姓名</label>
+                        <div class="layui-input-block">
+                            <input type="text" v-model="that.nickName" name="nickName" placeholder="用户名"
+                                   autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">password</label>
+                        <div class="layui-input-block">
+                            <input type="text" v-model="that.password" name="password" placeholder="password"
+                                   autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">登录名</label>
+                        <div class="layui-input-block">
+                            <input type="text" v-model="that.username" name="username" placeholder="username"
+                                   autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">角色</label>
+                        <div class="layui-input-block">
+                            <input type="text" v-model="that.role" name="role" placeholder="角色" autocomplete="off"
+                                   class="layui-input">
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">性别</label>
+                        <div class="layui-input-block">
+                            <input type="radio" name="sex" value="男" title="男" :checked="that.sex=='男'">
+                            <input type="radio" name="sex" value="女" title="女" :checked="that.sex=='女'"></div>
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">年龄</label>
+                        <div class="layui-input-block">
+                            <input type="text" v-model="that.age" name="age" placeholder="年龄" autocomplete="off"
+                                   class="layui-input">
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-col-md6" :class="that.role=='user'?vi:di">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">班级</label>
+                        <div class="layui-input-block">
+                            <select v-model="that.gradeId" name="gradeId">
+                                <option v-for="(it,i) in gradeList" v-bind:value="it.gradeId">{{it.gradeName}}</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div id="admins1" style="display: none;padding-right: 20px;">
+        <br>
+        <form class="layui-form" action="">
+            <div class="layui-row">
+                <div class="layui-col-md6">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">课程ID</label>
+                        <div class="layui-input-block">
+                            <select v-model="that.courseId" name="courseId">
+                                <option v-for="(it,i) in courseList" v-bind:value="it.courseId">{{it.courseName}}
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">分数</label>
+                        <div class="layui-input-block">
+                            <input type="text" v-model="thatScoure.course" name="course" placeholder="分数"
+                                   autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<script type="text/javascript" src="/js/require.js"></script>
+<script type="text/javascript" src="/js/requireConfig.js"></script>
+<script type="text/javascript" src="/app/user/list.js"></script>
+</body>
+</html>
